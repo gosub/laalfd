@@ -93,5 +93,21 @@ print(f"{b1=} {b2=}")
 \begin{enumerate}
 \item Write that statement at the matrix level. Use the matrix $A$ with the $\vect{a}$'s in its columns and use the column vector $\vect{c} = (c_1, \ldots, c_n)$.
 \item Write that statement at the scalar level. Use subscripts and sigma notation to add up numbers. The column vector $\vect{a}_j$ has components $\vect{a}_{1j}, \vect{a}_{2j}, \ldots, \vect{a}_{mj}$.
+
+\begin{displaymath}
+  \begin{bmatrix}
+    a_{1,1} ~ \ldots ~ a_{1,n} \\
+    a_{2,1} ~ \ldots ~ a_{2,n} \\
+    \vdots ~ \ddots ~ \vdots \\
+    a_{m,1} ~ \ldots ~ a_{m,n}
+  \end{bmatrix}
+  * \begin{bmatrix} c_1 \\ c_2 \\ \vdots \\ c_n \end{bmatrix}
+  = \begin{bmatrix} 0 \\ 0 \\ \vdots \\ 0_m \end{bmatrix}
+\end{displaymath}
+
+\begin{displaymath}
+\sum_{j=1}^{n} \sum_{i=1}^{m} a_{i,j} * c_j = 0
+\end{displaymath}
+
 \end{enumerate}
 \end{document}
