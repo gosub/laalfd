@@ -128,4 +128,19 @@ print(f"{b1=} {b2=}")
 
 Any other $\vect{z}$ vector that solves the equation $A\vect{z}=0$ is a linear combination of $\vect{x}$ and $\vect{y}$.
 
+\begin{verbatim}
+import numpy as np
+
+ones = [[1,1,1],[1,1,1],[1,1,1]]
+x = [1,-1,0]
+y = [1,1,-2]
+
+b1 = np.dot(ones, x)
+b2 = np.dot(ones, y)
+zeros = np.zeros(3, dtype='int')
+assert((b1 == zeros).all())
+assert((b2 == zeros).all())
+print(f"{b1=} {b2=}")
+\end{verbatim}
+
 \end{document}
