@@ -162,4 +162,33 @@ print(f"{b1=} {b2=}")
   \vect{u}^T\vect{z} = \begin{bmatrix} 2 ~ 0 ~ 1 \end{bmatrix} \begin{bmatrix} 1 \\ 0 \\ 1 \end{bmatrix} = 3
 \end{displaymath}
 
+\begin{verbatim}
+import numpy as np
+
+v = [1,1,0]
+w = [0,1,1]
+z = [1,-1,1]
+u = np.add(v,z)
+z_dot_u = np.dot(z,u)
+
+def project(a, b):
+   return np.dot(a, b) / np.linalg.norm(a)
+
+assert(project(v,z) == 0.0)
+assert(project(w,z) == 0.0)
+
+assert(z_dot_u != 0)
+
+m1 = [v,w,z]
+m2 = [v,w,u]
+
+rank1 = np.linalg.matrix_rank(m1)
+rank2 = np.linalg.matrix_rank(m2)
+
+assert(rank1 == 3)
+assert(rank2 == 3)
+
+print(f"{z=} {u=} {z_dot_u=}")
+\end{verbatim}
+
 \end{document}
