@@ -31,10 +31,8 @@
 
 \problemset{Problem Set I.1}
 
+\problem{Give an example where a combination of three nonzero vectors in $\mathbb{R}^4$ is the zero vector. Then write your example in the form $Ax = 0$. What are the shapes of $A$ and $x$ and 0?}
 
-\noindent\textbf{1} Give an example where a combination of three nonzero vectors in $\mathbb{R}^4$ is the zero 
-vector. Then write your example in the form $Ax = 0$. What are the shapes of $A$ and
-$x$ and 0?
 
 \begin{displaymath}
 2 \begin{bmatrix} 1 \\ 2 \\ 3 \\ 4 \end{bmatrix}
@@ -62,11 +60,10 @@ assert(b == np.zeros(4))
 print(b)
 \end{verbatim}
 
-\sep
 
-\noindent\textbf{2} Suppose a combination of the columns of A equals a different combination of those 
-columns. Write that as Ax = Ay. Find two combinations of the columns of A that
-equal the zero vector (in matrix language, find two solutions to Az = 0).
+\problem{Suppose a combination of the columns of A equals a different combination of those columns. Write that as Ax = Ay. Find two combinations of the columns of A that
+equal the zero vector (in matrix language, find two solutions to Az = 0).}
+
 
 \begin{displaymath}
 -2 \begin{bmatrix} 1 \\ 2 \\ 3 \\ 4 \end{bmatrix}
@@ -96,13 +93,13 @@ assert(b2 == np.zeros(4))
 print(f"{b1=} {b2=}")
 \end{verbatim}
 
-\sep
 
-\noindent\textbf{3} (Practice with subscripts) The vectors $\vect{a}_1, \vect{a}_2, \ldots , \vect{a}_n$ are in $m$-dimensional space $\mathbb{R}^m$, and a combination $c_1\vect{a}_1 + \cdots + c_n\vect{a}_n$ is the zero vector. That statement is at the vector level. 
+\problem{(Practice with subscripts) The vectors $\vect{a}_1, \vect{a}_2, \ldots , \vect{a}_n$ are in $m$-dimensional space $\mathbb{R}^m$, and a combination $c_1\vect{a}_1 + \cdots + c_n\vect{a}_n$ is the zero vector. That statement is at the vector level. 
 \begin{enumerate}[label=(\arabic*)]
 \item Write that statement at the matrix level. Use the matrix $A$ with the $\vect{a}$'s in its columns and use the column vector $\vect{c} = (c_1, \ldots, c_n)$.
 \item Write that statement at the scalar level. Use subscripts and sigma notation to add up numbers. The column vector $\vect{a}_j$ has components $\vect{a}_{1j}, \vect{a}_{2j}, \ldots, \vect{a}_{mj}$.
-\end{enumerate}
+\end{enumerate}}
+
 
 \begin{displaymath}
   \begin{bmatrix}
@@ -119,9 +116,9 @@ print(f"{b1=} {b2=}")
   \sum_{j=1}^{n} a_{i,j} * c_j = 0 ~ \text{for i in 1\ldots m}
 \end{displaymath}
 
-\sep
 
-\noindent\textbf{4} Suppose $A$ is the 3 by 3 matrix $\mathbf{ones}(3, 3)$ of all ones. Find two independent vectors $\vect{x}$ and $\vect{y}$ that solve $A\vect{x} = 0$ and $A\vect{y} = 0$. Write that first equation $A\vect{x} = 0$ (with numbers) as a combination of the columns of $A$. Why don't I ask for a third independent vector with $A\vect{z} = 0$? 
+\problem{Suppose $A$ is the 3 by 3 matrix $\mathbf{ones}(3, 3)$ of all ones. Find two independent vectors $\vect{x}$ and $\vect{y}$ that solve $A\vect{x} = 0$ and $A\vect{y} = 0$. Write that first equation $A\vect{x} = 0$ (with numbers) as a combination of the columns of $A$. Why don't I ask for a third independent vector with $A\vect{z} = 0$?}
+
 
 \begin{displaymath}
   x = \begin{bmatrix} 1 \\ -1 \\ 0 \end{bmatrix}
@@ -152,13 +149,13 @@ assert((b2 == zeros).all())
 print(f"{b1=} {b2=}")
 \end{verbatim}
 
-\sep
 
-\noindent\textbf{5} The linear combinations of $\vect{v} = (1, 1, 0)$ and $\vect{w} = (0, 1, 1)$ fill a plane in $\mathbb{R}^3$.
+\problem{The linear combinations of $\vect{v} = (1, 1, 0)$ and $\vect{w} = (0, 1, 1)$ fill a plane in $\mathbb{R}^3$.
 \begin{enumerate}[label=(\alph*)]
 \item Find a vector $\vect{z}$ that is perpendicular to $\vect{v}$ and $\vect{w}$. Then $\vect{z}$ is perpendicular to every vector $c\vect{v} + d\vect{w}$ on the plane: $(c\vect{v} + d\vect{w})^T \vect{z} = c\vect{v}^T\vect{z} + d\vect{w}^T\vect{z} = 0 + 0$. 
 \item Find a vector $\vect{u}$ that is not on the plane. Check that $\vect{u}^T\vect{z} \not= 0$.
-\end{enumerate}
+\end{enumerate}}
+
 
 \begin{displaymath}
   \vect{z} = \begin{bmatrix} 1 \\ -1 \\ 1 \end{bmatrix}
