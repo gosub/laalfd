@@ -223,4 +223,11 @@ The three possible fourth corners are:
 \problem{Describe the column space of $A = [\vect{v} ~ \vect{w} ~ \vect{v} + 2\vect{w}]$. Describe the nullspace of $A$: all vectors $\vect{x} = (x1, x2, x3)$ that solve $A\vect{x} = 0$. Add the "dimensions" of that plane (the column space of $A$) and that line (the nullspace of $A$):
   \begin{center}{\textbf{dimension of column space + dimension of nullspace = number of columns}}\end{center}}
 
+The column space of $A$ is swept by the linear combinations of the column vectors. Since the third column of $A$ is already a linear combination of the first two, this column space is made of the set of all the vector of the form $a\vect{v} + b\vect{w}$. As for the nullspace, we can parametrize $\vect{x}$ by $k$ such as all the vectors of the form $\vect{x} = (k, 2k, -k)$ are solution to $A\vect{x} = 0$ (assuming that $\vect{v}$ and $\vect{w}$ are independent).
+
+\begin{itemize}
+  \item dimension of column space = 2
+  \item dimension of nullspace = 1
+  \item number of columns = 3
+\end{itemize}
 \end{document}
