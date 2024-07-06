@@ -22,10 +22,12 @@
 \newcounter{prblm}
 \newcommand{\problemset}[1]{\setcounter{prblm}{0}\section*{#1}}
 \newcommand{\problem}[1]{
+  \begingroup
   \ifnum\value{prblm} > 0 \sep \fi
   \stepcounter{prblm}
   \noindent\textbf{\arabic{prblm}} #1
   \sol
+  \endgroup
 }
 
 \begin{document}
